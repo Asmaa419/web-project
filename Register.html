@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>register</title>
+        
+    <style>
+        * {
+  box-sizing: border-box;
+}
+ul {
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           overflow: hidden;}
+           li {
+           float: left;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: rgb(247, 233, 233);
+}
+header{padding: 30px;
+}
+input[type=text],input[type=tel] , input[type=password],select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: rgb(247, 233, 233);
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+        body {background-color: rgb(243, 201, 210);}
+        @media (max-width: 600px) {
+   
+   li {width: 25%;
+   }
+ }
+        @media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.submit{
+width: 100px;
+height: 35px;
+background-color: white;
+padding: 15px ;
+margin: 15px;
+}
+    </style>
+ 
+    </head>
+    <body>
+      <header>
+        <ul >
+            <li><a href="index.html">main</a></li>
+            <li><a href="New Cars.html">New Cars</a></li>
+            <li><a href="Used Cars.html">Used Cars</a></li>
+            <li style="float: right;"><a href="Register.html"><i class="glyphicon glyphicon-user">   </i>Sing in</a></li>
+        </ul>
+        </header>
+        <div class="container">
+        <form action="confirmation.html" id="form" method="POST" onsubmit="return validate()">
+          <fieldset>
+          <legend>Contact with us</legend>
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">First Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="fname" placeholder="Your name..">
+              </div>
+              
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Last Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lname" placeholder="Your last name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="password">password</label>
+              </div>
+              <div class="col-75">
+                <input type="password" id="password" name="password" placeholder="Your password...">
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="email">Email-address</label>
+                </div>
+              <div class="col-75">
+              <input type="text" id="email" name="email" placeholder="Your Email-address...">
+            </div>
+              </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Adrress">Adrress</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Adrress" name="Adrress" placeholder="Your Adrress...">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="phone">phone number</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="phone" name="phone" placeholder="Your phone 01..." pattern="[0][1][0-9]{9}">
+              </div>
+            </div>
+
+           <div class="row">
+             <div class="col-25" >
+              <label for="gender">gender</label>
+            </div>
+            <div class="col-75">
+              <select id="gender" name="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+                </select>
+            </div>
+            </div>
+
+            <center> <input type="submit" value="Submit" class="submit" ></center>
+        </fieldset>
+          </form>
+              </div>
+              <script src="my script.js"></script>
+    </body>
+</html>
